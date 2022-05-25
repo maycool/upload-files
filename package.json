@@ -1,0 +1,32 @@
+{
+  "name": "@es-task",
+  "version": "1.0.0",
+  "private": true,
+  "type": "Commonjs",
+  "scripts": {
+    "start": "node ./bin/www.js",
+    "lint": "eslint .",
+    "db:init": "docker-compose -f ./db/docker-compose.yaml --env-file .env up -d",
+    "jasmine": "jasmine",
+    "test": "npm run jasmine"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^6.0.0",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "express": "~4.16.1",
+    "express-oauth2-jwt-bearer": "^1.1.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.4",
+    "supertest": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "eslint": "^8.16.0",
+    "jasmine": "^4.1.0",
+    "nodemon": "^2.0.16"
+  }
+}
